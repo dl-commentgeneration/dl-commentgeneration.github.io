@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+### Replication package 
 
-You can use the [editor on GitHub](https://github.com/dl-commentgeneration/dl-commentgeneration.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Paper: *Improving Deep Learning based Comment Generation through Extractive Code Preprocessing*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We provide data and files used in paper and experiments as follow:
 
-### Markdown
+folder: dl_commentageneration_data/
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+| Dataset for Models | File List                                 | Brief Description                                            |
+| :----------------- | :---------------------------------------- | :----------------------------------------------------------- |
+| RQ1-TOK-Seq2Seq    | train/valid/test<br />vocab.nl/vocab.code | sequential data for original Seq2Seq<br />vocabulary for tokens and comments |
+| RQ1-TOK-OUR        | train/valid/test<br />vocab.nl/vocab.code | sequential data for improved Seq2Seq<br />vocabulary for tokens and comments |
+| RQ1-SBT-DeepCom    | train/valid/test<br />vocab.nl/vocab.code | sequential data for original DeepCom<br />vocabulary for SBTs and comments |
+| RQ1-SBT-OUR        | train/valid/test<br />vocab.nl/vocab.code | sequential data for improved DeepCom<br />vocabulary for SBTs and comments |
+| RQ1-SBT-AO-Funcom  | dataset.pkl<br />smls/dats/coms.tok       | sequential data for original Funcom<br />vocabulary for SBT-AOs, tokens and comments |
+| RQ1-SBT-AO-OUR     | dataset.pkl<br />smls/dats/coms.tok       | sequential data for improved Funcom<br />vocabulary for SBT-AOs, tokens and comments |
 
-```markdown
-Syntax highlighted code block
+folder: DeepCom/Seq2Seq/Funcom
 
-# Header 1
-## Header 2
-### Header 3
+| Model   | File List                                   | Brief Description                                            |
+| ------- | ------------------------------------------- | ------------------------------------------------------------ |
+| Seq2Seq | config<br />data<br />translate          | Configuration files for training<br />dataset path<br />code of model |
+| DeepCom | config<br />data<br />translate             | Configuration files for training<br />dataset path<br />code of model |
+| Funcom  | data<br />train/predict/bleu.py<br />models | dataset path<br />code of model<br />path to store models    |
 
-- Bulleted
-- List
+How to use the dataset to train a model:
 
-1. Numbered
-2. List
+For **DeepCom** & **Seq2Seq**, put the dataset file(i.e. RQ1-SBT-DeepCom) to corresponding path of model(i.e. DeepCom/data/), modify the description **data_dir** and **model_dir** to target dataset in code2nl.yaml. Then input the following command:
 
-**Bold** and _Italic_ and `Code` text
+**python __main__.py ../config/code2nl.yaml --train -v**
 
-[Link](url) and ![Image](src)
-```
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For **Funcom**, put the dataset file to corresponding path of model(Funcom/data/), modify the **data** and **outdir** to target dataset. THen input the following command:
 
-### Jekyll Themes
+**python train.py --model-type=ast-attengru --gpu=0**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dl-commentgeneration/dl-commentgeneration.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Get these dataset in [download Link]

@@ -37,7 +37,4 @@ For **Funcom**, put the dataset file to corresponding path of model(Funcom/data/
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Get these dataset in [download Link](https://drive.google.com/drive/folders/1-2uQxsmZ2Bzi0EMhLxHxw25iX1tLAIfa?usp=sharing
-https://drive.google.com/drive/folders/1ZbDwCNSzJdzS0DKThV_ljKM_QGLtBeM3?usp=sharing
-https://drive.google.com/drive/folders/1vTquM8zYzXaNlCoQDtYNkobXRcWfk84f?usp=sharing
-https://drive.google.com/drive/folders/1TnzgMumx8GLgyY9Hr3ZWNqliTH7Eamrv?usp=sharing)
+Get these dataset in [Download Link](ddd)

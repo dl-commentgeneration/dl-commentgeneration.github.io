@@ -25,4 +25,4 @@ For **Funcom**, put the dataset file to corresponding path of model(Funcom_Origi
 After training, if you want to evaluate the metrics for your trained model, you need to run **predict.py**  to output the generated comment for test dataset. Then the **bleu.py** will help you compute these values.
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Get these dataset in [Download Link](https://drive.google.com/drive/folders/1JQILCDm8Wv6SqWvIH-PrzUyLIU8ykO_Y?usp=sharing)
+Get these dataset in [Download Link](https://drive.google.com/file/d/112jjsI-Uzs83URh0IfYPhGzWol1cjnhD/view?usp=sharing)
